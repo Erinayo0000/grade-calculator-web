@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Grade Calculator</title>
+  </head>
+  <body>
+    <h2>Student Grade Calculator</h2>
+
+    <form method="post">
+      <input
+        type="text"
+        name="name"
+        placeholder="Student Name"
+        required
+      /><br /><br />
+      <input
+        type="number"
+        name="mark1"
+        placeholder="Score 1"
+        required
+      /><br /><br />
+      <input
+        type="number"
+        name="mark2"
+        placeholder="Score 2"
+        required
+      /><br /><br />
+      <input
+        type="number"
+        name="mark3"
+        placeholder="Score 3"
+        required
+      /><br /><br />
+
+      <button type="submit">Calculate</button>
+    </form>
+
+    {% if result %}
+    <h3>Result</h3>
+    <p>Name: {{ result.name }}</p>
+    <p>Average: {{ result.average }}</p>
+    <p>Grade: {{ result.grade }}</p>
+    {% endif %}
+  </body>
+</html>
